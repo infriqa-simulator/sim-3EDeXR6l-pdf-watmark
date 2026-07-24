@@ -14,6 +14,13 @@ terraform {
       version = ">= 3.5.0"
     }
   }
+  # Remote state for simulator detect/heal (uploaded post-apply into project tfstate SA)
+  backend "azurerm" {
+    resource_group_name  = "sim-3EDeXR6l-pdf-watmark-dev-rg"
+    storage_account_name = "sim3edexr6lpdfwatmarkdev"
+    container_name       = "tfstate-system"
+    key                  = "apps/sim-3EDeXR6l-pdf-watmark-dev/dev.tfstate"
+  }
 }
 
 provider "azurerm" {
