@@ -1,0 +1,5 @@
+environment = "dev"
+location = "centralus"
+pdf_watermarker_service_image = "mcr.microsoft.com/azuredocs/containerapps-helloworld:latest"
+subscription_id = "your-d22da79fc819"
+tags = {environment = "dev", managed_by = "cloud-dhan"}
